@@ -134,14 +134,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <transformers>
-                        <transformer
-                                implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>com.yilmaz.lab1rsoi.rsoilabproject1.Rsoilabproject1Application</mainClass>
-                        </transformer>
-                    </transformers>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.jolira</groupId>
