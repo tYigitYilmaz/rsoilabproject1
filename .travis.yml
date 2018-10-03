@@ -1,6 +1,4 @@
 language: java
-sudo: false
-script: mvn clean verify
 jdk:
 - oraclejdk8
 
@@ -8,8 +6,8 @@ before_install:
   - chmod +x mvnw
 
 install:
- - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
- - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+- mvn -N io.takari:maven:wrapper
+- ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 deploy:
    provider: heroku
