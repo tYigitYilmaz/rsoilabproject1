@@ -7,9 +7,22 @@ jdk:
 before_install:
   - chmod +x mvnw
 
-install:
-- mvn -N io.takari:maven:wrapper
-- ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+mvn test -B
+./mvnw test -B
+
+gradle assemble
+./gradlew assemble
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
 
 deploy:
    provider: heroku
