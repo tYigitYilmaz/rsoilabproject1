@@ -161,7 +161,7 @@
             <configuration>
                 <url>http://localhost:8080/manager</url>
                 <server>TomcatServer</server>
-                <path>/rsoilabproject1</path>
+                <path>C:\Users\otunckaya\Desktop\JavaProject\rsoilabproject1</path>
             </configuration>
             </plugin>
             <plugin>
