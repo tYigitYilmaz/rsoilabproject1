@@ -7,14 +7,13 @@ jdk:
 before_install:
   - chmod +x mvnw
 
+install:
 mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
+test:
 mvn test -B
 ./mvnw test -B
-
-gradle assemble
-./gradlew assemble
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
