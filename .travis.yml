@@ -6,9 +6,6 @@ jdk: oraclejdk8
 before_install:
   - chmod +x mvnw
 
-install:
-- mvn -N io.takari:maven:wrapper
-
 deploy:
    provider: heroku
    api_key: 61e0649e-43b4-4a9b-8190-a9302a86764d
